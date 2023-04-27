@@ -9,7 +9,8 @@ function breakStatement(num) {
     for (let i = 1; i <= 10; i++) {
       num += 2;
       if (total === num || i === num) {
-        return "Se interrumpió la ejecución";
+        results.push(i);
+        return `Se interrumpió la ejecución, la lista es: [${results}]`;
       }
       
       total += num;
