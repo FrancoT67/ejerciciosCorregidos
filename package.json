@@ -1,5 +1,5 @@
 {
-  "devDependencies": {
-    "inquirer": "^9.1.5"
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
   }
 }
