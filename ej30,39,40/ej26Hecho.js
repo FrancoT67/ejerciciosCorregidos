@@ -9,15 +9,14 @@ const ecommerce = [
   function totalDeArticulos(ecommerce) {
     const secciones = {};
     for (let i = 0; i < ecommerce.length; i++) {
-      let producto = ecommerce[i];
-      let seccion = producto.nombre[0];
-      if (secciones[seccion] === undefined) {
-        secciones[seccion] = {nombre: '', valorTotal: 0};
+      const e = ecommerce[i];
+      if (secciones[e.nombre] === undefined) {
+        secciones[e.nombre] = 0;
       }
-      secciones[seccion].nombre = producto.nombre;
-      secciones[seccion].valorTotal += producto.precio * producto.articulos;
+    secciones[e.nombre] += e.precio;
     }
-    return Object.values(secciones);
+    return secciones;   
+        
   }
   
   console.log(totalDeArticulos(ecommerce));
